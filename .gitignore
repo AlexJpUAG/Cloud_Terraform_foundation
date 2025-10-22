@@ -1,0 +1,23 @@
+# Terraform / OpenTofu
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+crash.log
+override.tf
+override.tf.json
+*.tfplan
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# VS Code
+.vscode/
+.env
+
+# Credentials
+aws_credentials
