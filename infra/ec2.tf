@@ -42,11 +42,12 @@ resource "aws_instance" "photo_app" {
               #!/bin/bash
               yum update -y
               yum install -y python3 git
+              yum install -y python3-pip
               pip3 install flask boto3
               cd /home/ec2-user
               git clone https://github.com/AlexJpUAG/Cloud_Terraform_foundation.git
-              cd open-tofu-photo-app/app
-              FLASK_APP=app.py flask run --host=0.0.0.0 --port=80 &
+              cd Cloud_Terraform_foundation/app
+              nohup flask run --host=0.0.0.0 --port=80 > /home/ec2-user/flask.log 2>&1 &
               EOF
 
   tags = {
