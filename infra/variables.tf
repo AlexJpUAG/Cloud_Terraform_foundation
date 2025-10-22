@@ -19,7 +19,7 @@ variable "ami_id" {
 variable "bucket_name" {
   description = "Name for the S3 bucket"
   type        = string
-  default     = "photo-upload-bucket-demo"
+  default     = "photo-upload-bucket-Cloud_AJP"
 }
 
 variable "instance_name" {
